@@ -1,26 +1,44 @@
-<section class="botones">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCalc Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="botones">
     <button class="limpiar" onclick="limpiar()">AC</button>
     <button class="limpiar" onclick="borrar()">DEL</button>
-    <button class="operador" onclick="agregar('(')">(</button>
-    <button class="operador" onclick="agregar(')')">)</button>
+    <button class="cientifico" onclick="agregar('(')">(</button>
+    <button class="cientifico" onclick="agregar(')')">)</button>
+
+    <button class="cientifico" onclick="funcionCientifica('sin')">sin</button>
+    <button class="cientifico" onclick="funcionCientifica('cos')">cos</button>
+    <button class="cientifico" onclick="funcionCientifica('tan')">tan</button>
+    <button class="operador" onclick="agregar('/')">÷</button>
+
+    <button class="cientifico" onclick="funcionCientifica('sqrt')">√</button>
+    <button class="cientifico" onclick="funcionCientifica('log')">log</button>
+    <button class="cientifico" onclick="funcionCientifica('ln')">ln</button>
+    <button class="operador" onclick="agregar('*')">×</button>
 
     <button class="numero" onclick="agregar('7')">7</button>
     <button class="numero" onclick="agregar('8')">8</button>
     <button class="numero" onclick="agregar('9')">9</button>
-    <button class="operador" onclick="agregar('/')">÷</button>
+    <button class="operador" onclick="agregar('-')">−</button>
 
     <button class="numero" onclick="agregar('4')">4</button>
     <button class="numero" onclick="agregar('5')">5</button>
     <button class="numero" onclick="agregar('6')">6</button>
-    <button class="operador" onclick="agregar('*')">×</button>
+    <button class="operador" onclick="agregar('+')">+</button>
 
     <button class="numero" onclick="agregar('1')">1</button>
     <button class="numero" onclick="agregar('2')">2</button>
     <button class="numero" onclick="agregar('3')">3</button>
-    <button class="operador" onclick="agregar('-')">−</button>
+    <button class="cientifico" onclick="cuadrado()">x²</button>
 
     <button class="numero cero" onclick="agregar('0')">0</button>
     <button class="numero" onclick="agregar('.')">.</button>
     <button class="igual" onclick="calcular()">=</button>
-    <button class="operador" onclick="agregar('+')">+</button>
 </section>

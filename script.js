@@ -34,3 +34,48 @@ function calcular() {
         pantalla.value = "Error";
     }
 }
+
+function funcionCientifica(tipo){
+    try{
+        let valor = Number(eval(pantalla.value));
+        let resiltado;
+
+        switch(tipo){
+            case "sin":
+                resiltado = Math.sin(valor * Math.PI / 180);
+                break;
+            case "cos":
+                resiltado = Math.cos(valor * Math.PI / 180);
+                break;
+            case "tan":
+                resiltado = Math.tan(valor * Math.PI / 180);
+                break;
+            case "sqrt":
+                resiltado = Math.sqrt(valor);
+                break;
+            case "log":
+                resiltado = Math.log10(valor);
+                break;
+            case "ln":
+                resiltado = Math.log(valor);
+                break;
+        }
+            if(!isFinite(resultado)){
+                pantalla.value = "Error";
+                return;
+            }
+            pantalla.value = Number.isInteger(resiltado) ? resiltado : resiltado.toFixed(10);
+    }catch(error){
+        pantalla.value = "Error";       
+    }
+}
+
+
+function cuadrado() {
+    try {
+        let valor = Number(eval(pantalla.value));
+        pantalla.value = valor ** 2;
+    } catch (error) {
+        pantalla.value = "Error";
+    }
+}
